@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Viaja Facil - Pacote de Paris </title>
+    <link rel ="stylesheet" href="estilos.css" type="text/css">
+</head>
+<body>
+    <div id="principal">
+	
+		<header>
+			<img src="/Viaja Fácil/Fotos/header.png" class="cabeçalho">
+		</header>
+		
+		<nav>
+		
+		<p>		
+			<a href="Webdesign.html"> INICIO </a>
+			<a href="sobre.html"> SOBRE NÓS </a>
+			<a href="fotos.html"> GUIA </a>
+			<a href="top.html"> TOP 5 DA SEMANA</a>
+			<a href="contato.html"> CONTATO </a>
+		</p>
+		
+		</nav>
+		
+		<section>
+			<h1 class="number1">Toquio - Japão</h1>
+
+			<div class="weather-widget">
+				<h2>Previsão do Tempo em Toquio:</h2>
+				<div id="weather-info">Carregando clima...>
+				</div>
+			</div>
+	
+			<br>
+			<br>
+	
+			<h2>Principais Atrações :</h2>
+					
+	<div class="content-section1">
+				<div class="highlight-card">
+					<img src="/Viaja Fácil/Fotos/Toquio/senso.jpeg" alt="Templo Senso-ji Visto de noite" width="300" height="200" class="ji">
+				<div class="card-content">
+					<h2 class="tit2">Senso-ji</h2>
+						<p>Templo Sensō-ji, também conhecido como Templo de Asakusa, é um templo budista japonês antigo que se localiza em Asakusa, Tóquio. É o templo budista mais antigo de Tóquio, datado em 645 d.C. Anteriormente associado com a seita Tendai do Budismo, tornou-se independente após a Segunda Guerra Mundial.</p>
+	
+						<br>
+							
+				<a href="https://www.senso-ji.jp/english/">Planeje sua visita (Site Oficial)</a>
+					</div>
+			</div>
+						
+						<br>
+						<br>
+	
+			<div class="highlight-card">
+				<img src="/Viaja Fácil/Fotos/Toquio/shibuya.jpeg" alt="Cruzamento de shibuya Visto de Cima" width="300" height="200" class="shibuya">
+					<div class="card-content">
+				<h2 class="tit2"> Cruzamento de Shibuya</h2>
+					<p>O Cruzamento de Shibuya é um cruzamento no distrito de Shibuya, em Tóquio, no Japão, conhecido por suas faixas de pedestres, uma das quais cruza diagonalmente o centro da própria interseção.</p>
+	
+						<br>
+	
+				<a href="https://www.city.shibuya.tokyo.jp.e.mu.hp.transer.com/">Descubra mais (Site Oficial)</a>
+					</div>
+			</div>
+					
+						<br>
+						<br>
+	
+			<div class="highlight-card">
+				<img src="/Viaja Fácil/Fotos/Toquio/torre.webp" alt="Torre de Toquio vista no detalhe" width="300" height="200" class="torre">
+					<div class="card-content">
+				<h2 class="tit2"> Torre de Toquio </h2>
+					<p>A Torre de Tóquio é uma torre de comunicação e um belveder localizado no distrito Shiba-koen em Minato, Tóquio, Japão. Com 333 metros de altura, é a segunda maior estrutura artificial do Japão.</p>
+	
+						<br>
+	
+				<a href="https://www.tokyotower.co.jp/">Saiba mais (Site Oficial)</a>
+					</div>
+						</div>
+					
+	
+	</div>
+	
+	<div class="content-section2" id="gastronomy">
+				<h2> Gastronomia Japonesa </h2>
+						
+			<div class="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item">
+						<img src="/Viaja Fácil/Fotos/Toquio/comida1.jpg" width="800" height="400">
+			</div>
+	
+				<div class="carousel-item">
+					<img src="/Viaja Fácil/Fotos/Toquio/comida2.jpg" width="800" height="400">
+				</div>
+	
+			</div>
+						  <button class="carousel-control carousel-prev">←</button>
+						  <button class="carousel-control carousel-next">→</button>
+						</div>
+	</div>
+					
+					<br>
+	
+		<h2>Planeje sua Viagem</h2>
+	
+		  <div class="booking-widget">
+	
+		<h2 class="tit2"> Hotel... Trivago: </h2>
+	
+		<br>
+	
+		<a href="https://www.trivago.com.br/pt-BR/lm/hot%C3%A9is-t%C3%B3quio-jap%C3%A3o?search=200-71462;dr-20241024-20241121-s;rc-1-2">Reservar Agora</a>
+			
+		<br>
+		<br>
+
+		<h2 class="tit2"> Compre sua Passagem, vai de Latam: </h2>
+
+		<br>
+	
+		<a href="https://www.latamairlines.com/br/pt/oferta-voos?origin=SAO&outbound=2024-10-24T00%3A00%3A00.000Z&destination=TYO&inbound=null&adt=1&chd=0&inf=0&trip=OW&cabin=Economy&redemption=false&sort=RECOMMENDED">Comprar Passagem</a>
+					
+		<script>
+	
+				async function getWeather() {
+		try {
+		  const weatherInfo = document.getElementById('weather-info');
+		  const weather = {
+			temp: Math.round(15 + Math.random() * 10),
+			condition: ['Ensolarado', 'Parcialmente nublado', 'Nublado'][Math.floor(Math.random() * 3)]
+		  };
+		  
+		  weatherInfo.innerHTML = `
+			<p>Temperatura atual: ${weather.temp}°C</p>
+			<p>Condição: ${weather.condition}</p>
+		  `;
+		} catch (error) {
+		  console.error('Erro ao carregar previsão do tempo:', error);
+		}
+	  }
+					
+		getWeather();
+		document.querySelector('.booking-widget').addEventListener('click', function() {
+		window.location.href = 'https://travel-guide.com/rio/booking';
+		});
+					
+			window.addEventListener('scroll', function() {
+			const header = document.querySelector('.header');
+			const scrolled = window.pageYOffset;
+			header.style.transform = `translateY(${scrolled * 0.5}px)`;
+			});
+	
+			const carousel = document.querySelector('.carousel-inner');
+	  const items = document.querySelectorAll('.carousel-item');
+	  let currentIndex = 0;
+	  
+	  document.querySelector('.carousel-next').addEventListener('click', () => {
+		currentIndex = (currentIndex + 1) % items.length;
+		updateCarousel();
+	  });
+	  
+	  document.querySelector('.carousel-prev').addEventListener('click', () => {
+		currentIndex = (currentIndex - 1 + items.length) % items.length;
+		updateCarousel();
+	  });
+	  
+	  function updateCarousel() {
+		carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+	  }
+		
+		</script>
+			   
+				  
+		</section>
+			  
+			  <aside>
+			  
+			  
+			  </aside>
+			  
+			  <div style="clear:both"> </div> 
+			  
+			  <footer>
+			  
+			  <p> Viaja Fácil - Website desenvolvido por Estácio - Direitos Reservados 2024 </p>
+			  
+			  </footer>
+			  
+		  </div>		
+	   </body>
+		
+	   </html>
+		  

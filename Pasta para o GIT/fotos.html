@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+ <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Viaja Fácil - Fotos
+		</title>
+	<link rel ="stylesheet" href="estilos.css" type="text/css">
+	
+	</head>
+  
+ <body>
+	<div id="principal">
+	
+		<header>
+			<img src="/Viaja Fácil/Fotos/header.png" class="cabeçalho">
+		</header>
+		
+		<nav>
+		<p>
+			<a href="Webdesign.html">INICIO </a>
+			<a href="sobre.html">SOBRE NÓS </a>
+			<a href="fotos.html">GUIA </a>
+			<a href="top.html">TOP 5 DA SEMANA </a>
+			<a href="contato.html">CONTATO </a>
+			
+		</nav>
+		
+		<section>
+		<h1 class="number1"> Guia </h1>
+	
+		<h2> Pacotes Disponíveis: </h2>
+
+		<div class="destination-grid">
+
+		  <div class="destination-card">
+			<img class="card-img" src="/Viaja Fácil/Fotos/Paris/paris.jpeg" alt="Paris, vista da Torre Eiffel ao pôr do sol" width="300" height="200">
+			<div class="card-content">
+			  
+				<h3 class="tit3-pais"> Paris, França </h3>
+			  <p> <strong>Descrição:</strong> Paris, a capital da França, é uma importante cidade europeia e um centro mundial de arte, moda, gastronomia e cultura. <br>
+					Sua paisagem urbana do século XIX é cortada por avenidas largas e pelo rio Sena. A cidade é conhecida por monumentos como a Torre Eiffel <br> 
+					e a Catedral de Notre-Dame, uma construção gótica do século XII, sendo famosa também pela cultura dos cafés e por lojas de estilistas <br> 
+					famosos na Rue du Faubourg Saint-Honoré. </p>
+
+			  <br>
+
+			  <a href="paris.html">Saiba mais</a>
+			
+			  <br>
+			  <br>
+			  <br>
+
+			</div>
+		  </div>
+		
+		  <div class="destination-card">
+
+			<img class="card-img" src="/Viaja Fácil/Fotos/Rio de janeiro/rio.jpeg" alt="Rio de Janeiro, vista aérea do Cristo Redentor" width="300" height="200">
+			<div class="card-content">
+
+			  <h3 class="tit3-pais">Rio de Janeiro, Brasil</h3>
+			<p> <strong> Descrição: </strong> O Rio de Janeiro é uma grande cidade brasileira à beira-mar, <br> 
+			  	famosa pelas praias de Copacabana e Ipanema, pela estátua de 38 metros de altura do Cristo Redentor,
+			   	no topo do Corcovado, e pelo Pão de Açúcar,<br> um pico de granito com teleféricos até seu cume.   
+			   	A cidade também é conhecida pelas grandes favelas. <br> O empolgante Carnaval, com carros alegóricos,  
+			  	fantasias extravagantes e sambistas, é considerado o maior do mundo... <br> 
+			</p>
+
+			  <br>
+
+			  <a href="rio.html">Saiba mais</a>
+
+			  <br>
+			  <br>
+			  <br>
+
+			</div>
+		  </div>
+		
+		  <div class="destination-card">
+
+			<img class="card-img" src="/Viaja Fácil/Fotos/Toquio/toquio.jpeg" alt="Tóquio, vista noturna com luzes neon" width="350">
+			<div class="card-content">
+
+			   <h3 class="tit2-pais">Tóquio, Japão</h3>
+			<p> <strong> Descrição: </strong> Tóquio, a movimentada capital do Japão, combina o estilo ultramoderno 
+				com o tradicional, desde arranha-céus iluminados <br> 
+				por neon a templos históricos. 
+				O opulento santuário xintoísta Meiji  é conhecido por seu altíssimo portão 
+				e pelas florestas circundantes. <br>
+				O Palácio Imperial fica localizado em meio a jardins públicos. Os muitos museus da cidade oferecem exposições
+				que variam de arte clássica (no Museu Nacional de Tóquio) a um teatro kabuki reconstruído (no Museu Edo-Tokyo)...
+			</p>
+
+			  <br>
+
+			  <a href="toquio.html">Saiba mais</a>
+
+			  <br>
+			  <br>
+			  <br>
+
+			</div>
+		  </div>
+		</div>
+		
+		<div class="floating-button" id="planTrip">
+		  <i class="fas fa-plane"></i>
+		</div>
+		
+		<script>
+		document.querySelector('.search-input').addEventListener('input', function(e) {
+		  const value = e.target.value.toLowerCase();
+		  const cards = document.querySelectorAll('.destination-card');
+		  
+		  cards.forEach(card => {
+			const title = card.querySelector('h3').textContent.toLowerCase();
+			if (title.includes(value)) {
+			  card.style.display = 'block';
+			} else {
+			  card.style.display = 'none';
+			}
+		  });
+		});
+		
+		document.getElementById('planTrip').addEventListener('click', function() {
+		  const destinations = ['Paris', 'Tóquio', 'Nova York', 'Rio de Janeiro', 'Londres'];
+		  const randomDestination = destinations[Math.floor(Math.random() * destinations.length)];
+		  
+		  alert(`Que tal uma viagem para ${randomDestination}? Temos ótimas ofertas para lá!`);
+		});
+		
+		// Adiciona efeito de parallax no hero
+		window.addEventListener('scroll', function() {
+		  const hero = document.querySelector('.hero');
+		  const scrolled = window.pageYOffset;
+		  hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+		});
+		</script>	
+		<p></p>
+	
+		</section>
+		
+		<aside>
+		
+		
+		
+		<p>
+		<img src="/Viaja Fácil/Fotos/Anuncios/anuncio5-latam.jpg" width="300" class="top">
+		</p>
+
+		<p>
+			<img src="/Viaja Fácil/Fotos/Anuncios/anuncio4-buser.jpeg" width="300" class="top">
+			</p>
+		
+		</aside>
+		
+		<div style="clear:both"> </div> 
+		
+		<footer>
+		
+		<p> Viaja Fácil - Website desenvolvido por Estácio - Direitos Reservados 2024 </p>
+		
+		</footer>
+		
+	</div>		
+ </body>
+  
+ </html>
